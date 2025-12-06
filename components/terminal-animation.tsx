@@ -5,7 +5,7 @@ import {
 } from "@/components/ui/terminal";
 
 const TerminalAnimation = () => (
-  <Terminal className="min-h-[240px]">
+  <Terminal className="min-h-[200px]">
     <TypingAnimation delay={1} duration={80}>
       $ whoami
     </TypingAnimation>
@@ -14,7 +14,7 @@ const TerminalAnimation = () => (
       $ !$ --verbose
     </TypingAnimation>
     <AnimatedSpan delay={1900}>
-      Inspiring engineer at Stanford University. Reputedly competent programmer
+      Inspiring engineer @ Stanford University. Reputedly competent programmer
       and avid open source enthusiast.
     </AnimatedSpan>
   </Terminal>
