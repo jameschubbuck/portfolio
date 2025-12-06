@@ -3,20 +3,20 @@ import Footer from "@/components/footer";
 import Socials from "@/components/socials";
 import Projects from "@/components/projects";
 import TerminalAnimation from "@/components/terminal-animation";
+
 export default function Home() {
   return (
-    <div className="flex flex-col min-h-screen dark:bg-black bg-zinc-50">
-      {/* Main content grows to take remaining space */}
-      <div className="flex flex-col items-center flex-1 bg-zinc-50 dark:bg-black gap-8 p-8 justify-center w-full">
+    <div className="flex flex-col min-h-screen dark:bg-black bg-zinc-50 items-center">
+      <main className="flex-1 flex flex-col items-center justify-center max-w-[520px] w-full mx-auto p-8 gap-8">
         <Header />
-        <div className="w-full max-w-[500px] flex flex-col gap-4">
+        <div className="w-full flex flex-col gap-4">
           <TerminalAnimation />
-          <div className="flex justify-between pt-10">
+          <div className="flex justify-between pt-10 w-full">
             <Socials />
             <Projects />
           </div>
         </div>
-      </div>
+      </main>
       <Footer />
     </div>
   );

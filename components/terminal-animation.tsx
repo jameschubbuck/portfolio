@@ -14,7 +14,7 @@ const TerminalAnimation = () => (
       $ !$ --verbose
     </TypingAnimation>
     <AnimatedSpan delay={1900}>
-      Inspiring engineer @ Stanford University. Reputedly competent programmer
+      Inspiring engineer at Stanford University. Reputedly competent programmer
       and avid open source enthusiast.
     </AnimatedSpan>
   </Terminal>

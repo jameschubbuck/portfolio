@@ -16,7 +16,7 @@ export default function Projects() {
           )}
         />
         <SocialButton
-          href="https://github.com/jameschubbuck"
+          href="https://github.com/jameschubbuck/nixos-config"
           label="NixOS Config"
           icon={SiNixos}
         />
