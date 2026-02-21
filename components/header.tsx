@@ -1,10 +1,11 @@
 export default function Header() {
   return (
     <h1
-      className="text-4xl w-full grid grid-flow-col auto-cols-max justify-between justify-items-center gap-4
-                   max-[490px]:grid-flow-row max-[490px]:justify-center max-[490px]:text-center pb-10"
+      className="text-4xl w-full flex justify-between items-center pb-10
+                   max-[490px]:justify-center max-[490px]:gap-2"
     >
-      <span>ABOUT:JAMES</span>
+      <span>ABOUT:</span>
+      <span>JAMES</span>
       <span className="max-[490px]:hidden">CHUBBUCK</span>
     </h1>
   );
