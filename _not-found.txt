@@ -1,16 +1,141 @@
 1:"$Sreact.fragment"
-2:I[89554,["/_next/static/chunks/347d096d3a9dc168.js"],"ThemeProvider"]
+2:I[89554,["/_next/static/chunks/6a597947e94341ba.js"],"ThemeProvider"]
 3:I[39756,["/_next/static/chunks/ff1a16fafef87110.js","/_next/static/chunks/247eb132b7f7b574.js"],"default"]
 4:I[37457,["/_next/static/chunks/ff1a16fafef87110.js","/_next/static/chunks/247eb132b7f7b574.js"],"default"]
-5:I[30091,["/_next/static/chunks/347d096d3a9dc168.js","/_next/static/chunks/7f6db74dc7f06540.js","/_next/static/chunks/1ba9d411917cbc9d.js"],"default"]
-6:I[97367,["/_next/static/chunks/ff1a16fafef87110.js","/_next/static/chunks/247eb132b7f7b574.js"],"OutletBoundary"]
-7:"$Sreact.suspense"
-9:I[97367,["/_next/static/chunks/ff1a16fafef87110.js","/_next/static/chunks/247eb132b7f7b574.js"],"ViewportBoundary"]
-b:I[97367,["/_next/static/chunks/ff1a16fafef87110.js","/_next/static/chunks/247eb132b7f7b574.js"],"MetadataBoundary"]
-d:I[68027,["/_next/static/chunks/ff1a16fafef87110.js","/_next/static/chunks/247eb132b7f7b574.js"],"default"]
-:HL["/_next/static/chunks/9f2ef01dde863f9b.css","style"]
-0:{"P":null,"b":"NSsSlq-tVqszDAwqZJ6-H","c":["","_not-found"],"q":"","i":false,"f":[[["",{"children":["/_not-found",{"children":["__PAGE__",{}]}]},"$undefined","$undefined",true],[["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/chunks/9f2ef01dde863f9b.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","script","script-0",{"src":"/_next/static/chunks/347d096d3a9dc168.js","async":true,"nonce":"$undefined"}]],["$","html",null,{"lang":"en","className":"geist_mono_948ab427-module__a9d7EW__className","suppressHydrationWarning":true,"children":["$","body",null,{"className":"antialiased","children":["$","$L2",null,{"attribute":"class","defaultTheme":"system","enableSystem":true,"disableTransitionOnChange":true,"children":["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","div",null,{"className":"flex flex-col min-h-screen dark:bg-black bg-zinc-50 items-center justify-center p-8","children":["$","main",null,{"className":"flex flex-col items-center justify-center max-w-[520px] w-full mx-auto gap-8","children":["$","div",null,{"className":"w-full flex flex-col gap-4","children":["$","$L5",null,{}]}]}]}],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}]}]}]]}],{"children":[["$","$1","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["$","$1","c",{"children":[["$","div",null,{"className":"flex flex-col min-h-screen dark:bg-black bg-zinc-50 items-center justify-center p-8","children":["$","main",null,{"className":"flex flex-col items-center justify-center max-w-[520px] w-full mx-auto gap-8","children":["$","div",null,{"className":"w-full flex flex-col gap-4","children":["$","$L5",null,{}]}]}]}],[["$","script","script-0",{"src":"/_next/static/chunks/7f6db74dc7f06540.js","async":true,"nonce":"$undefined"}],["$","script","script-1",{"src":"/_next/static/chunks/1ba9d411917cbc9d.js","async":true,"nonce":"$undefined"}]],["$","$L6",null,{"children":["$","$7",null,{"name":"Next.MetadataOutlet","children":"$@8"}]}]]}],{},null,false,false]},null,false,false]},null,false,false],["$","$1","h",{"children":[["$","meta",null,{"name":"robots","content":"noindex"}],["$","$L9",null,{"children":"$@a"}],["$","div",null,{"hidden":true,"children":["$","$Lb",null,{"children":["$","$7",null,{"name":"Next.Metadata","children":"$@c"}]}]}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}],false]],"m":"$undefined","G":["$d","$undefined"],"S":true}
-a:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
-e:I[27201,["/_next/static/chunks/ff1a16fafef87110.js","/_next/static/chunks/247eb132b7f7b574.js"],"IconMark"]
-c:[["$","title","0",{"children":"James Chubbuck"}],["$","meta","1",{"name":"description","content":"Student @ Stanford University."}],["$","link","2",{"rel":"icon","href":"/icon.png?icon.ebdf68e9.png","sizes":"32x32","type":"image/png"}],["$","$Le","3",{}]]
-8:null
+5:I[22016,["/_next/static/chunks/6a597947e94341ba.js","/_next/static/chunks/48f970a6374cdbdf.js","/_next/static/chunks/c33ccf730a77ddda.js"],""]
+c:I[68027,["/_next/static/chunks/ff1a16fafef87110.js","/_next/static/chunks/247eb132b7f7b574.js"],"default"]
+:HL["/_next/static/chunks/7b00dce833fc66d5.css","style"]
+6:T4f7,                                    010101    
+                                  110110100001 
+                                 100       1  
+                                01          0 
+                              1110          0 
+                                 1          0 
+                                  0         1 
+                                  100      10 
+10                                   010000   
+ 0 01                                11       
+   0  11                            1 01      
+     100101                        0  01      
+         00111                    0   1 1     
+             10010              01    1  0    
+                 01010        01      0   00  
+                     000110 01       11     0 
+                        1 101       1 1      1
+                                   0   1       
+                                  1    0      
+                                  1    0      
+                                 0     1      
+                                0       1     
+                               1         0    
+                               1          1   
+                              1            0  
+                             0              1 
+                             1               0
+7:T75f,                      011100101                           
+                               10000100                   
+                                      00001110            
+11                                           1011001      
+ 01                                               001000  
+ 000                               1100100011        01111
+   0 1                           10  1    110        0    
+    0 1                          00 111 0  1 110    1     
+      0 0                       0      0 1     0    0     
+       0000                     1        10111 00  1      
+         1 0                    0         1  0  1  0      
+          11 0                  0         10 1  0 1       
+            1001                 0      0 0  0 10         
+              000                 00111 0 0  1  0         
+                0110               1  1  1   10 1         
+                  1 0             0  00 1   0  1          
+                    1001        000  1 1 100              
+                      110010000    1   0 0                
+                         000        0 00 0                
+                                     0   0                
+                                     000 0                
+                                        0 0               
+                                      00   0              
+                                     0      0             
+                                    0        0            
+                                   0          0           
+                                   0           0          
+                                   0            00        
+                                   0              0       
+                                   0               0      
+                                   0                00    
+                                                          0:{"P":null,"b":"oop-Kd8y8fMFKpjySTHvF","c":["","_not-found"],"q":"","i":false,"f":[[["",{"children":["/_not-found",{"children":["__PAGE__",{}]}]},"$undefined","$undefined",true],[["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/chunks/7b00dce833fc66d5.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","script","script-0",{"src":"/_next/static/chunks/6a597947e94341ba.js","async":true,"nonce":"$undefined"}]],["$","html",null,{"lang":"en","className":"geist_mono_948ab427-module__a9d7EW__className","suppressHydrationWarning":true,"children":["$","body",null,{"className":"antialiased","children":["$","$L2",null,{"attribute":"class","defaultTheme":"system","enableSystem":true,"disableTransitionOnChange":true,"children":["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","div",null,{"className":"flex flex-col min-h-screen dark:bg-black bg-zinc-50 items-center justify-center p-8","children":[["$","div",null,{"className":"fixed bottom-0 left-0 right-0 pointer-events-none z-50 w-full h-0 overflow-visible","children":[["$","$L5",null,{"href":"https://xkcd.com/344/","target":"_blank","className":"absolute bottom-0 left-0 m-2 pointer-events-auto hidden min-[1260px]:block no-underline","aria-label":"XKCD 344 Reference - Lackeys","children":["$","pre",null,{"className":"text-[10px] leading-[10px] font-mono whitespace-pre text-muted-foreground/30 select-none","children":"$6"}]}],["$","$L5",null,{"href":"https://xkcd.com/344/","target":"_blank","className":"absolute bottom-0 right-0 m-2 pointer-events-auto hidden min-[1260px]:block no-underline","aria-label":"XKCD 344 Reference - Richard","children":["$","pre",null,{"className":"text-[10px] leading-[10px] font-mono whitespace-pre text-muted-foreground/30 select-none text-right","children":"$7"}]}]]}],"$L8"]}],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}]}]}]]}],{"children":["$L9",{"children":["$La",{},null,false,false]},null,false,false]},null,false,false],"$Lb",false]],"m":"$undefined","G":["$c","$undefined"],"S":true}
+d:I[30091,["/_next/static/chunks/6a597947e94341ba.js","/_next/static/chunks/48f970a6374cdbdf.js","/_next/static/chunks/c33ccf730a77ddda.js"],"default"]
+14:I[97367,["/_next/static/chunks/ff1a16fafef87110.js","/_next/static/chunks/247eb132b7f7b574.js"],"ViewportBoundary"]
+16:I[97367,["/_next/static/chunks/ff1a16fafef87110.js","/_next/static/chunks/247eb132b7f7b574.js"],"MetadataBoundary"]
+17:"$Sreact.suspense"
+8:["$","main",null,{"className":"flex flex-col items-center justify-center max-w-[520px] w-full mx-auto gap-8","children":["$","div",null,{"className":"w-full flex flex-col gap-4","children":["$","$Ld",null,{}]}]}]
+9:["$","$1","c",{"children":[null,["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}]
+e:T4f7,                                    010101    
+                                  110110100001 
+                                 100       1  
+                                01          0 
+                              1110          0 
+                                 1          0 
+                                  0         1 
+                                  100      10 
+10                                   010000   
+ 0 01                                11       
+   0  11                            1 01      
+     100101                        0  01      
+         00111                    0   1 1     
+             10010              01    1  0    
+                 01010        01      0   00  
+                     000110 01       11     0 
+                        1 101       1 1      1
+                                   0   1       
+                                  1    0      
+                                  1    0      
+                                 0     1      
+                                0       1     
+                               1         0    
+                               1          1   
+                              1            0  
+                             0              1 
+                             1               0
+f:T75f,                      011100101                           
+                               10000100                   
+                                      00001110            
+11                                           1011001      
+ 01                                               001000  
+ 000                               1100100011        01111
+   0 1                           10  1    110        0    
+    0 1                          00 111 0  1 110    1     
+      0 0                       0      0 1     0    0     
+       0000                     1        10111 00  1      
+         1 0                    0         1  0  1  0      
+          11 0                  0         10 1  0 1       
+            1001                 0      0 0  0 10         
+              000                 00111 0 0  1  0         
+                0110               1  1  1   10 1         
+                  1 0             0  00 1   0  1          
+                    1001        000  1 1 100              
+                      110010000    1   0 0                
+                         000        0 00 0                
+                                     0   0                
+                                     000 0                
+                                        0 0               
+                                      00   0              
+                                     0      0             
+                                    0        0            
+                                   0          0           
+                                   0           0          
+                                   0            00        
+                                   0              0       
+                                   0               0      
+                                   0                00    
+                                                          a:["$","$1","c",{"children":[["$","div",null,{"className":"flex flex-col min-h-screen dark:bg-black bg-zinc-50 items-center justify-center p-8","children":[["$","div",null,{"className":"fixed bottom-0 left-0 right-0 pointer-events-none z-50 w-full h-0 overflow-visible","children":[["$","$L5",null,{"href":"https://xkcd.com/344/","target":"_blank","className":"absolute bottom-0 left-0 m-2 pointer-events-auto hidden min-[1260px]:block no-underline","aria-label":"XKCD 344 Reference - Lackeys","children":["$","pre",null,{"className":"text-[10px] leading-[10px] font-mono whitespace-pre text-muted-foreground/30 select-none","children":"$e"}]}],["$","$L5",null,{"href":"https://xkcd.com/344/","target":"_blank","className":"absolute bottom-0 right-0 m-2 pointer-events-auto hidden min-[1260px]:block no-underline","aria-label":"XKCD 344 Reference - Richard","children":["$","pre",null,{"className":"text-[10px] leading-[10px] font-mono whitespace-pre text-muted-foreground/30 select-none text-right","children":"$f"}]}]]}],"$L10"]}],["$L11","$L12"],"$L13"]}]
+b:["$","$1","h",{"children":[["$","meta",null,{"name":"robots","content":"noindex"}],["$","$L14",null,{"children":"$@15"}],["$","div",null,{"hidden":true,"children":["$","$L16",null,{"children":["$","$17",null,{"name":"Next.Metadata","children":"$@18"}]}]}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}]
+19:I[97367,["/_next/static/chunks/ff1a16fafef87110.js","/_next/static/chunks/247eb132b7f7b574.js"],"OutletBoundary"]
+10:["$","main",null,{"className":"flex flex-col items-center justify-center max-w-[520px] w-full mx-auto gap-8","children":["$","div",null,{"className":"w-full flex flex-col gap-4","children":["$","$Ld",null,{}]}]}]
+11:["$","script","script-0",{"src":"/_next/static/chunks/48f970a6374cdbdf.js","async":true,"nonce":"$undefined"}]
+12:["$","script","script-1",{"src":"/_next/static/chunks/c33ccf730a77ddda.js","async":true,"nonce":"$undefined"}]
+13:["$","$L19",null,{"children":["$","$17",null,{"name":"Next.MetadataOutlet","children":"$@1a"}]}]
+15:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+1b:I[27201,["/_next/static/chunks/ff1a16fafef87110.js","/_next/static/chunks/247eb132b7f7b574.js"],"IconMark"]
+18:[["$","title","0",{"children":"James Chubbuck"}],["$","meta","1",{"name":"description","content":"Student @ Stanford University."}],["$","link","2",{"rel":"icon","href":"/icon.png?icon.ebdf68e9.png","sizes":"32x32","type":"image/png"}],["$","$L1b","3",{}]]
+1a:null
