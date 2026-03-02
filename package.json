@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build && touch out/.nojekyll && cp CNAME out/ && bunx gh-pages -d out --dotfiles",
+    "build": "next build && touch out/.nojekyll && cp CNAME out/",
+    "publish": "bunx gh-pages -d out --dotfiles",
     "start": "next start",
     "lint": "eslint"
   },

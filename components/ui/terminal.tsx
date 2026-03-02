@@ -5,6 +5,8 @@ import { motion, MotionProps } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import { X } from "lucide-react";
 
+import { ThemeToggle } from "@/components/theme-toggle";
+
 interface AnimatedSpanProps extends MotionProps {
   children: React.ReactNode;
   delay?: number;
@@ -34,6 +36,7 @@ interface TypingAnimationProps extends MotionProps {
   duration?: number;
   delay?: number;
   as?: React.ElementType;
+  [key: string]: any;
 }
 
 export const TypingAnimation = ({
@@ -106,8 +109,9 @@ export const Terminal = ({ children, className }: TerminalProps) => {
       )}
     >
       <div className="flex flex-col gap-y-2 border-b border-border p-2">
-        <div className="flex flex-row gap-x-2">
+        <div className="flex flex-row justify-between items-center gap-x-2">
           <X className="h-4 w-4 text-muted-foreground" />
+          <ThemeToggle />
         </div>
       </div>
       <pre className="p-2 flex-1">

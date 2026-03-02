@@ -1,4 +1,4 @@
-name: Keep resume up to date. 
+name: Daily Resume Compilation
 
 on:
   schedule:
@@ -17,15 +17,29 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Compile LaTeX document
         uses: xu-cheng/latex-action@v3
         with:
           root_file: resume.tex
-          working_directory: public 
+          working_directory: public
 
-      - name: Commit and push PDF
+      - name: Commit and push PDF to main
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "chore: resume compilation"
+          commit_message: "chore: daily resume compilation"
           file_pattern: 'public/*.pdf'
+
+      - name: Sync PDF to gh-pages
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git fetch origin gh-pages
+          git checkout gh-pages
+          git checkout main -- public/resume.pdf
+          mv public/resume.pdf ./resume.pdf
+          git add resume.pdf
+          git commit -m "chore: sync daily resume compilation to live site" || echo "No changes"
+          git push origin gh-pages
