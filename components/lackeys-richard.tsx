@@ -18,11 +18,11 @@ export default function LackeysRichard() {
   }
 
   return (
-    <div className="fixed bottom-0 left-0 right-0 pointer-events-none hidden 2xl:block z-50 w-full h-0 overflow-visible">
+    <div className="fixed bottom-0 left-0 right-0 pointer-events-none z-50 w-full h-0 overflow-visible">
       <Link 
         href="https://xkcd.com/344/" 
         target="_blank" 
-        className="absolute bottom-0 left-0 pointer-events-auto block no-underline p-12"
+        className="absolute bottom-0 left-0 m-2 pointer-events-auto hidden min-[1260px]:block no-underline"
         aria-label="XKCD 344 Reference - Lackeys"
       >
         <pre className="text-[10px] leading-[10px] font-mono whitespace-pre text-muted-foreground/30 select-none">
@@ -32,7 +32,7 @@ export default function LackeysRichard() {
       <Link 
         href="https://xkcd.com/344/" 
         target="_blank" 
-        className="absolute bottom-0 right-0 pointer-events-auto block no-underline p-12"
+        className="absolute bottom-0 right-0 m-2 pointer-events-auto hidden min-[1260px]:block no-underline"
         aria-label="XKCD 344 Reference - Richard"
       >
         <pre className="text-[10px] leading-[10px] font-mono whitespace-pre text-muted-foreground/30 select-none text-right">

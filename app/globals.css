@@ -154,3 +154,26 @@
     @apply bg-background text-foreground;
   }
 }
+
+@layer utilities {
+  .text-cross-hatch {
+    background-image: 
+      repeating-linear-gradient(
+        45deg,
+        var(--muted-foreground),
+        var(--muted-foreground) 1px,
+        transparent 1px,
+        transparent 3px
+      ),
+      repeating-linear-gradient(
+        -45deg,
+        var(--muted-foreground),
+        var(--muted-foreground) 1px,
+        transparent 1px,
+        transparent 3px
+      );
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+}
