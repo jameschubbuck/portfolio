@@ -1,0 +1,31 @@
+name: Keep resume up to date. 
+
+on:
+  schedule:
+    - cron: '0 0 * * *'
+  workflow_dispatch:
+  push:
+    paths:
+      - 'public/resume.tex'
+
+jobs:
+  build_resume:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Compile LaTeX document
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: resume.tex
+          working_directory: public 
+
+      - name: Commit and push PDF
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore: resume compilation"
+          file_pattern: 'public/*.pdf'
