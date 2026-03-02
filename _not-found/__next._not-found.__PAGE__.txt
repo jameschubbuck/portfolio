@@ -1,6 +1,6 @@
 1:"$Sreact.fragment"
-2:I[22016,["/_next/static/chunks/6a597947e94341ba.js","/_next/static/chunks/48f970a6374cdbdf.js","/_next/static/chunks/c33ccf730a77ddda.js"],""]
-9:I[30091,["/_next/static/chunks/6a597947e94341ba.js","/_next/static/chunks/48f970a6374cdbdf.js","/_next/static/chunks/c33ccf730a77ddda.js"],"default"]
+2:I[22016,["/_next/static/chunks/6a597947e94341ba.js","/_next/static/chunks/48f970a6374cdbdf.js","/_next/static/chunks/16590b8452c7e8d8.js"],""]
+9:I[30091,["/_next/static/chunks/6a597947e94341ba.js","/_next/static/chunks/48f970a6374cdbdf.js","/_next/static/chunks/16590b8452c7e8d8.js"],"default"]
 a:I[97367,["/_next/static/chunks/ff1a16fafef87110.js","/_next/static/chunks/247eb132b7f7b574.js"],"OutletBoundary"]
 b:"$Sreact.suspense"
 3:T4f7,                                    010101    
@@ -61,9 +61,9 @@ b:"$Sreact.suspense"
                                    0              0       
                                    0               0      
                                    0                00    
-                                                          0:{"buildId":"oop-Kd8y8fMFKpjySTHvF","rsc":["$","$1","c",{"children":[["$","div",null,{"className":"flex flex-col min-h-screen dark:bg-black bg-zinc-50 items-center justify-center p-8","children":[["$","div",null,{"className":"fixed bottom-0 left-0 right-0 pointer-events-none z-50 w-full h-0 overflow-visible","children":[["$","$L2",null,{"href":"https://xkcd.com/344/","target":"_blank","className":"absolute bottom-0 left-0 m-2 pointer-events-auto hidden min-[1260px]:block no-underline","aria-label":"XKCD 344 Reference - Lackeys","children":["$","pre",null,{"className":"text-[10px] leading-[10px] font-mono whitespace-pre text-muted-foreground/30 select-none","children":"$3"}]}],["$","$L2",null,{"href":"https://xkcd.com/344/","target":"_blank","className":"absolute bottom-0 right-0 m-2 pointer-events-auto hidden min-[1260px]:block no-underline","aria-label":"XKCD 344 Reference - Richard","children":["$","pre",null,{"className":"text-[10px] leading-[10px] font-mono whitespace-pre text-muted-foreground/30 select-none text-right","children":"$4"}]}]]}],"$L5"]}],["$L6","$L7"],"$L8"]}],"loading":null,"isPartial":false}
+                                                          0:{"buildId":"ZcKxCBcButFyb0IFRD4vH","rsc":["$","$1","c",{"children":[["$","div",null,{"className":"flex flex-col min-h-screen dark:bg-black bg-zinc-50 items-center justify-center p-8","children":[["$","div",null,{"className":"fixed bottom-0 left-0 right-0 pointer-events-none z-50 w-full h-0 overflow-visible","children":[["$","$L2",null,{"href":"https://xkcd.com/344/","target":"_blank","className":"absolute bottom-0 left-0 m-2 pointer-events-auto hidden min-[1260px]:block no-underline cursor-custom-default","tabIndex":-1,"aria-hidden":"true","children":["$","pre",null,{"className":"text-[10px] leading-[10px] font-mono whitespace-pre text-muted-foreground/30 dark:text-muted-foreground/50 select-none cursor-custom-default","children":"$3"}]}],["$","$L2",null,{"href":"https://xkcd.com/344/","target":"_blank","className":"absolute bottom-0 right-0 m-2 pointer-events-auto hidden min-[1260px]:block no-underline cursor-custom-default","tabIndex":-1,"aria-hidden":"true","children":["$","pre",null,{"className":"text-[10px] leading-[10px] font-mono whitespace-pre text-muted-foreground/30 dark:text-muted-foreground/50 select-none text-right cursor-custom-default","children":"$4"}]}]]}],"$L5"]}],["$L6","$L7"],"$L8"]}],"loading":null,"isPartial":false}
 5:["$","main",null,{"className":"flex flex-col items-center justify-center max-w-[520px] w-full mx-auto gap-8","children":["$","div",null,{"className":"w-full flex flex-col gap-4","children":["$","$L9",null,{}]}]}]
 6:["$","script","script-0",{"src":"/_next/static/chunks/48f970a6374cdbdf.js","async":true}]
-7:["$","script","script-1",{"src":"/_next/static/chunks/c33ccf730a77ddda.js","async":true}]
+7:["$","script","script-1",{"src":"/_next/static/chunks/16590b8452c7e8d8.js","async":true}]
 8:["$","$La",null,{"children":["$","$b",null,{"name":"Next.MetadataOutlet","children":"$@c"}]}]
 c:null
