@@ -18,3 +18,9 @@ textarea,
     url("/cursors/beam.png") 10 10,
     text;
 }
+
+.cursor-custom-default {
+  cursor:
+    url("/cursors/arrow.png") 0 0,
+    auto !important;
+}

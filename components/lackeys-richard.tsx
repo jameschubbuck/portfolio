@@ -22,20 +22,22 @@ export default function LackeysRichard() {
       <Link 
         href="https://xkcd.com/344/" 
         target="_blank" 
-        className="absolute bottom-0 left-0 m-2 pointer-events-auto hidden min-[1260px]:block no-underline"
-        aria-label="XKCD 344 Reference - Lackeys"
+        className="absolute bottom-0 left-0 m-2 pointer-events-auto hidden min-[1260px]:block no-underline cursor-custom-default"
+        tabIndex={-1}
+        aria-hidden="true"
       >
-        <pre className="text-[10px] leading-[10px] font-mono whitespace-pre text-muted-foreground/30 select-none">
+        <pre className="text-[10px] leading-[10px] font-mono whitespace-pre text-muted-foreground/30 dark:text-muted-foreground/50 select-none cursor-custom-default">
           {lackeys}
         </pre>
       </Link>
       <Link 
         href="https://xkcd.com/344/" 
         target="_blank" 
-        className="absolute bottom-0 right-0 m-2 pointer-events-auto hidden min-[1260px]:block no-underline"
-        aria-label="XKCD 344 Reference - Richard"
+        className="absolute bottom-0 right-0 m-2 pointer-events-auto hidden min-[1260px]:block no-underline cursor-custom-default"
+        tabIndex={-1}
+        aria-hidden="true"
       >
-        <pre className="text-[10px] leading-[10px] font-mono whitespace-pre text-muted-foreground/30 select-none text-right">
+        <pre className="text-[10px] leading-[10px] font-mono whitespace-pre text-muted-foreground/30 dark:text-muted-foreground/50 select-none text-right cursor-custom-default">
           {richard}
         </pre>
       </Link>

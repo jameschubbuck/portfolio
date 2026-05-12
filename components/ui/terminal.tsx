@@ -1,13 +1,13 @@
 "use client";
 
 import { cn } from "@/lib/utils";
-import { motion, MotionProps } from "framer-motion";
+import { motion, HTMLMotionProps, MotionProps } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import { X } from "lucide-react";
 
 import { ThemeToggle } from "@/components/theme-toggle";
 
-interface AnimatedSpanProps extends MotionProps {
+interface AnimatedSpanProps extends HTMLMotionProps<"div"> {
   children: React.ReactNode;
   delay?: number;
   className?: string;
@@ -24,7 +24,7 @@ export const AnimatedSpan = ({
     animate={{ opacity: 1, y: 0 }}
     transition={{ duration: 0.3, delay: delay / 1000 }}
     className={cn("text-sm font-normal tracking-tight", className)}
-    {...(props as any)}
+    {...props}
   >
     {children}
   </motion.div>
@@ -36,6 +36,7 @@ interface TypingAnimationProps extends MotionProps {
   duration?: number;
   delay?: number;
   as?: React.ElementType;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   [key: string]: any;
 }
 
@@ -88,6 +89,7 @@ export const TypingAnimation = ({
     <MotionComponent
       ref={elementRef}
       className={cn("text-sm font-bold tracking-tight", className)}
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       {...(props as any)}
     >
       {displayedText}
@@ -95,22 +97,30 @@ export const TypingAnimation = ({
   );
 };
 
-interface TerminalProps {
+interface TerminalProps extends HTMLMotionProps<"div"> {
   children: React.ReactNode;
   className?: string;
+  onClose?: () => void;
 }
 
-export const Terminal = ({ children, className }: TerminalProps) => {
+export const Terminal = ({ children, className, onClose, ...props }: TerminalProps) => {
   return (
-    <div
+    <motion.div
       className={cn(
         "z-0 h-full  w-full max-w-lg border border-border bg-background mb-2",
         className,
       )}
+      {...props}
     >
       <div className="flex flex-col gap-y-2 border-b border-border p-2">
         <div className="flex flex-row justify-between items-center gap-x-2">
-          <X className="h-4 w-4 text-muted-foreground" />
+          <button 
+            onClick={onClose} 
+            className="text-muted-foreground hover:text-foreground transition-colors cursor-pointer"
+            aria-label="Close terminal"
+          >
+            <X className="h-4 w-4" />
+          </button>
           <ThemeToggle />
         </div>
       </div>
@@ -119,6 +129,6 @@ export const Terminal = ({ children, className }: TerminalProps) => {
           {children}
         </code>
       </pre>
-    </div>
+    </motion.div>
   );
 };
