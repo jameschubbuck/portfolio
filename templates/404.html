@@ -1,0 +1,65 @@
+{{define "content"}}
+<div class="ascii-corner ascii-left">
+  <a
+    href="https://xkcd.com/344/"
+    target="_blank"
+    tabindex="-1"
+    aria-hidden="true"
+  >
+    <pre>{{.Lackeys}}</pre>
+  </a>
+</div>
+<div class="ascii-corner ascii-right">
+  <a
+    href="https://xkcd.com/344/"
+    target="_blank"
+    tabindex="-1"
+    aria-hidden="true"
+  >
+    <pre>{{.Richard}}</pre>
+  </a>
+</div>
+<main class="main main--404">
+  <div class="content-wrapper">
+    <div id="terminal" class="terminal" role="log" aria-label="Terminal output">
+      <div class="terminal-header">
+        <button
+          id="terminal-close"
+          class="terminal-btn"
+          aria-label="Close terminal"
+          style="visibility: hidden"
+        >
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            width="16"
+            height="16"
+          >
+            <path d="M18 6L6 18M6 6l12 12" />
+          </svg>
+        </button>
+        <button
+          id="theme-toggle"
+          class="theme-toggle-btn"
+          aria-label="Toggle theme"
+        ></button>
+      </div>
+      <pre class="terminal-body"><code id="terminal-output"></code></pre>
+    </div>
+  </div>
+</main>
+<footer class="footer">
+  <div class="footer-content">
+    <span class="footer-bracket">&lt;!--</span>
+    <span id="footer-text" class="footer-text"
+      >Made with &#9829; in California</span
+    >
+    <span class="footer-bracket">--&gt;</span>
+  </div>
+</footer>
+<div id="splash-404" style="display: none">{{.Splash}}</div>
+{{end}} {{define "scripts"}}
+<script src="/static/js/404.js"></script>
+{{end}}

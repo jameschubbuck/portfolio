@@ -1,0 +1,389 @@
+:root {
+  --bg: #fafafa;
+  --fg: #111;
+  --muted: #6f6f6f;
+  --border: #ddd;
+  --red: #e33;
+  --green: #2a2;
+  --yellow: #da0;
+  --blue: #26e;
+  --content-width: calc(32rem + 30px);
+  --bar-bg: #e8e8e8;
+  --return-fg: #4f4f4f;
+  --depth: 8px;
+  --blue-reverse: #7bf;
+}
+
+.dark {
+  --bg: #151515;
+  --fg: #eee;
+  --muted: #bbb;
+  --border: #444;
+  --red: #f88;
+  --green: #6d6;
+  --yellow: #fe0;
+  --blue: #7bf;
+  --bar-bg: #1e1e1e;
+  --return-fg: #d0d0d0;
+  --blue-reverse: #26e;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  transition:
+    background-color 0.2s ease 0.1s,
+    color 0.2s ease 0.1s,
+    border-color 0.2s ease 0.1s;
+}
+
+body {
+  margin: 0;
+  font-family: "Geist Mono", "Courier New", monospace;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: var(--fg);
+}
+
+a:visited {
+  color: var(--fg);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  align-items: center;
+  background: var(--bg);
+  color: var(--fg);
+}
+
+.main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: calc(var(--content-width) + 4rem);
+  width: 100%;
+  margin: 0 auto;
+  padding: 2rem;
+  gap: 2rem;
+}
+
+.main--404 {
+  justify-content: flex-start;
+  padding-top: 4rem;
+}
+
+.content-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+
+.header {
+  font-family: "Geist", system-ui, sans-serif;
+  font-size: 2rem;
+  font-weight: 800;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding-bottom: 2rem;
+  letter-spacing: -0.02em;
+}
+
+@media (max-width: 490px) {
+  .header {
+    justify-content: center;
+    gap: 0.5rem;
+    font-size: 1.5rem;
+  }
+
+  .hide-narrow {
+    display: none;
+  }
+}
+
+.hide-narrow {
+  display: inline;
+}
+
+.terminal {
+  z-index: 0;
+  width: 100%;
+  max-width: var(--content-width);
+  min-height: 200px;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  margin-bottom: 0.5rem;
+}
+
+.terminal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+  border-bottom: 1px solid var(--border);
+  background: var(--bar-bg);
+}
+
+#terminal-close {
+  color: var(--red);
+}
+
+.terminal-btn,
+.theme-toggle-btn {
+  background: none;
+  border: none;
+  color: var(--muted);
+  padding: 0;
+  line-height: 0;
+  font-size: 0.75rem;
+}
+
+.terminal-btn:hover,
+.theme-toggle-btn:hover {
+  color: var(--fg);
+}
+
+.terminal-body {
+  padding: 0.5rem;
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.5;
+  white-space: pre-wrap;
+  word-break: break-word;
+  overflow: auto;
+}
+
+.terminal-body code {
+  font-family: inherit;
+}
+
+.terminal-line {
+  min-height: 1.25rem;
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+.terminal-typed {
+  font-weight: 700;
+}
+
+.terminal-return {
+  color: var(--return-fg);
+}
+
+.gap-row {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: var(--content-width);
+  align-self: center;
+}
+
+.fancy-button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  overflow: visible;
+  height: 2.25rem;
+  padding: 0 1.25rem;
+  color: var(--bg);
+  text-decoration: none;
+  border-radius: 0.375rem;
+  user-select: none;
+  z-index: 1;
+}
+
+.fancy-button:visited {
+  color: var(--bg);
+}
+
+.fancy-button::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--fg);
+  border-radius: 0.375rem;
+  z-index: -1;
+}
+
+.fancy-button::after {
+  content: "";
+  position: absolute;
+  top: calc(-1 * var(--depth));
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--fg);
+  clip-path: polygon(
+    0.375rem var(--depth),
+    calc(100% - 0.375rem) var(--depth),
+    50% var(--depth)
+  );
+  z-index: -2;
+  transition: clip-path 0.15s ease-out 0.1s;
+}
+
+.fancy-button:hover {
+  color: var(--blue-reverse);
+}
+
+.fancy-button:hover::after {
+  clip-path: polygon(
+    0.375rem var(--depth),
+    calc(100% - 0.375rem) var(--depth),
+    50% 0%
+  );
+}
+
+.button-content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.button-content svg {
+  flex-shrink: 0;
+  transition: color 0.2s ease 0.1s;
+}
+
+.ascii-corner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  pointer-events: none;
+  width: 100%;
+  height: 0;
+  overflow: visible;
+}
+
+.ascii-corner a {
+  position: absolute;
+  bottom: 0;
+  pointer-events: auto;
+  cursor: default;
+  display: none;
+  margin: 0.5rem;
+  text-decoration: none;
+}
+
+@media (min-width: 1260px) {
+  .ascii-corner a {
+    display: block;
+  }
+}
+
+.ascii-left a {
+  left: 0;
+}
+
+.ascii-right a {
+  right: 0;
+}
+
+.ascii-corner pre {
+  font-size: 10px;
+  line-height: 10px;
+  white-space: pre;
+  color: var(--muted);
+  opacity: 0.3;
+  user-select: none;
+}
+
+.dark .ascii-corner pre {
+  opacity: 0.5;
+}
+
+.footer {
+  width: 100%;
+  max-width: var(--content-width);
+  display: flex;
+  align-items: center;
+  font-size: 0.875rem;
+  padding: 1rem 0;
+  color: var(--fg);
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  width: 100%;
+}
+
+.footer-bracket {
+  white-space: nowrap;
+  font-variant-ligatures: none;
+  font-feature-settings: "calt" 0;
+  font-weight: 700;
+}
+
+.footer-bracket:first-child {
+  text-align: left;
+}
+
+.footer-bracket:last-child {
+  text-align: right;
+}
+
+.footer-text {
+  justify-self: center;
+  text-align: center;
+}
+
+.footer-link {
+  text-decoration: underline;
+  color: inherit;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.terminal-line.fade-in {
+  animation: fadeIn 0.3s ease-out both;
+}
+
+.text-muted {
+  color: var(--muted);
+}
+
+.text-red {
+  color: var(--red);
+}
+
+.text-yellow {
+  color: var(--yellow);
+}
+
+.text-green {
+  color: var(--green);
+}
+
+.text-blue {
+  color: var(--blue);
+}
+
+.hover-underline:hover {
+  text-decoration: underline;
+}
