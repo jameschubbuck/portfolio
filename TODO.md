@@ -1,0 +1,12 @@
+- x button alignment (needs to be higher and left)
+- instagram
+- github 
+- update resume
+- photo gallery
+- musings (philosphy)
+- ponderings (essays)
+- RSS for both?
+- fancy underline for title?
+- <!-- as svg for alignment? -->
+- gallery for photos? w/ map? 
+- mobile format (small width). 
