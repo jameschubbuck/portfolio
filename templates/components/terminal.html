@@ -1,0 +1,30 @@
+{{define "terminal"}}
+<div id="terminal" class="terminal" role="log" aria-label="Terminal output">
+  <div class="terminal-header">
+    {{block "closeButton" .}}
+    <button
+      id="terminal-close"
+      class="terminal-btn"
+      aria-label="Close terminal"
+    >
+      <svg
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-linecap="round"
+        width="18"
+        height="18"
+      >
+        <path d="M4 4l16 16M4 20L20 4" />
+      </svg>
+    </button>
+    {{end}}
+    <button
+      id="theme-toggle"
+      class="theme-toggle-btn"
+      aria-label="Toggle theme"
+    ></button>
+  </div>
+  <pre class="terminal-body"><code id="terminal-output"></code></pre>
+</div>
+{{end}}

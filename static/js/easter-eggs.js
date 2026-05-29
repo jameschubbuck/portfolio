@@ -25,7 +25,7 @@
           ft.innerHTML =
             '<a href="' +
             url +
-            '" target="_blank" class="footer-link">' +
+            '" target="_blank" class="footer-link link-blue">' +
             msg +
             "</a>";
       }
@@ -37,6 +37,6 @@
     var ft = document.getElementById("footer-text");
     if (ft)
       ft.innerHTML =
-        'When one door closes, <a href="https://en.wikipedia.org/wiki/Special:Random" target="_blank" class="footer-link">another opens </a>';
+        'there&#39;s always something <a href="https://en.wikipedia.org/wiki/Special:Random" target="_blank" class="footer-link link-blue">new</a>';
   };
 })();

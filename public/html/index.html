@@ -33,6 +33,7 @@
     target="_blank"
     tabindex="-1"
     aria-hidden="true"
+    class="hover-lift"
   >
     <pre>                                    010101    
                                   110110100001 
@@ -70,6 +71,7 @@
     target="_blank"
     tabindex="-1"
     aria-hidden="true"
+    class="hover-lift"
   >
     <pre>                      011100101                           
                                10000100                   
@@ -106,12 +108,8 @@
   </a>
 </div>
 <main class="main">
-  <h1 class="header">
-    <span>ABOUT:</span>
-    <span>JAMES</span>
-    <span class="hide-narrow">CHUBBUCK</span>
-  </h1>
-  <img src="/underline.svg" alt="" class="title-underline" />
+  <h1 class="header title" data-title="JAMES|CHUBBUCK"></h1>
+  <img src="/svg/underline.svg" alt="" class="title-underline" />
   <div class="content-wrapper">
     <div id="terminal" class="terminal" role="log" aria-label="Terminal output">
       <div class="terminal-header">
@@ -139,15 +137,15 @@
       </div>
       <pre class="terminal-body"><code id="terminal-output"></code></pre>
     </div>
-    <div class="gap-row">
+    <div class="gap-row icon-only-row">
       <a
         href="https://www.linkedin.com/in/jameschubbuck/"
         target="_blank"
         class="outline-button"
         aria-label="LinkedIn"
       >
-        <img src="/linkedin.svg" alt="" width="20" height="20" />
-        LinkedIn
+        <span class="icon icon-linkedin" aria-hidden="true"></span>
+        <span class="button-label">LinkedIn</span>
       </a>
       <a
         href="https://github.com/jameschubbuck"
@@ -155,8 +153,8 @@
         class="outline-button"
         aria-label="GitHub"
       >
-        <img src="/github.svg" alt="" width="20" height="20" />
-        GitHub
+        <span class="icon icon-github" aria-hidden="true"></span>
+        <span class="button-label">GitHub</span>
       </a>
       <a
         href="https://www.instagram.com/james.chubbuck/"
@@ -164,8 +162,8 @@
         class="outline-button"
         aria-label="Instagram"
       >
-        <img src="/instagram.svg" alt="" width="20" height="20" />
-        Instagram
+        <span class="icon icon-instagram" aria-hidden="true"></span>
+        <span class="button-label">Instagram</span>
       </a>
     </div>
     <div class="gap-row gap-row--wide">
@@ -175,8 +173,8 @@
         class="outline-button outline-button--wide"
         aria-label="Contact"
       >
-        <img src="/mail.svg" alt="" width="20" height="20" />
-        Contact
+        <span class="icon icon-mail" aria-hidden="true"></span>
+        <span class="button-label">Contact</span>
       </a>
       <a
         href="/resume.pdf"
@@ -184,72 +182,54 @@
         class="outline-button outline-button--wide"
         aria-label="Resume"
       >
-        <img src="/file.svg" alt="" width="20" height="20" />
-        Resume
+        <span class="icon icon-file" aria-hidden="true"></span>
+        <span class="button-label">Resume</span>
       </a>
     </div>
     <div class="gap-row">
       <a
         role="button"
         tabindex="0"
-        class="outline-button outline-button--cursive"
+        class="outline-button"
         aria-label="Thoughts"
       >
-        <img src="/lightbulb.svg" alt="" width="20" height="20" />
-        Thoughts
+        <span class="icon icon-lightbulb" aria-hidden="true"></span>
+        <span class="button-label">Thoughts</span>
       </a>
       <a
         role="button"
         tabindex="0"
-        class="outline-button outline-button--cursive"
+        class="outline-button"
         aria-label="Gallery"
       >
-        <img src="/camera.svg" alt="" width="20" height="20" />
-        Gallery
+        <span class="icon icon-camera" aria-hidden="true"></span>
+        <span class="button-label">Gallery</span>
       </a>
       <a
         role="button"
         tabindex="0"
-        class="outline-button outline-button--cursive"
+        class="outline-button"
         aria-label="Ponderings"
       >
-        <img src="/thought-bubble.svg" alt="" width="20" height="20" />
-        Ponderings
+        <span class="icon icon-thought-bubble" aria-hidden="true"></span>
+        <span class="button-label">Ponderings</span>
       </a>
+    </div>
     </div>
 </main>
 <footer class="footer">
   <div class="footer-content">
-    <img src="/footer-left.svg" alt="" class="footer-bracket" />
-    <span id="footer-text" class="footer-text">Made with ❤️ in California</span>
-    <img src="/footer-right.svg" alt="" class="footer-bracket" />
+    <img src="/svg/footer-left.svg" alt="" class="footer-bracket" />
+    <span id="footer-text" class="footer-text">Made with &#10084;&#65039; in California</span>
+    <img src="/svg/footer-right.svg" alt="" class="footer-bracket" />
   </div>
 </footer>
  
 <script src="/static/js/terminal.js"></script>
 <script src="/static/js/easter-eggs.js"></script>
-<script>
-(function() {
-  document.querySelectorAll('a, button, [role="button"]').forEach(function(el) {
-    el.classList.add('hover-lift');
-  });
-  const buttons = document.querySelectorAll('.hover-lift');
-  var max = 5;
-  buttons.forEach(function(btn) {
-    btn.addEventListener('mousemove', function(e) {
-      var r = btn.getBoundingClientRect();
-      var x = (e.clientX - r.left) / r.width - 0.5;
-      var y = (e.clientY - r.top) / r.height - 0.5;
-      btn.style.transform = 'translate(' + (x * max * 2) + 'px,' + (y * max * 2) + 'px) scale(1.05)';
-    });
-    btn.addEventListener('mouseleave', function() {
-      btn.style.transform = '';
-    });
-  });
-})();
-</script>
-
-      <script src="/static/js/theme.js"></script>
+<script src="/static/js/title.js"></script>
+<script src="/static/js/hover-lift.js"></script>
+<script src="/static/js/theme.js"></script>
     </div>
   </body>
 </html>

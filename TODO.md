@@ -1,6 +1,0 @@
-- update resume
-- RSS for both?
-- fancy underline for title?
-- <!-- as svg for alignment? -->
-- gallery for photos? w/ map? 
-- mobile format (small width). 

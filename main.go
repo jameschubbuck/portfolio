@@ -2,16 +2,13 @@ package main
 
 import (
 	"embed"
-	"html/template"
+	"io"
 	"io/fs"
 	"log"
-	"math/rand"
 	"net/http"
+	"path"
 	"strings"
 )
-
-//go:embed all:templates
-var templateFS embed.FS
 
 //go:embed all:static
 var staticFS embed.FS
@@ -19,114 +16,51 @@ var staticFS embed.FS
 //go:embed all:public
 var publicFS embed.FS
 
-var (
-	indexTmpl    *template.Template
-	notfoundTmpl *template.Template
-	lackeysText  string
-	richardText  string
-	splashes     []string
-)
-
-type PageData struct {
-	Dark    bool
-	Lackeys string
-	Richard string
-}
-
-type NotFoundData struct {
-	Dark    bool
-	Lackeys string
-	Richard string
-	Splash  string
-}
-
 func main() {
-	readPublicFiles()
-
-	base := template.Must(template.ParseFS(templateFS, "templates/base.html"))
-	indexTmpl = template.Must(template.Must(base.Clone()).ParseFS(templateFS, "templates/index.html"))
-	notfoundTmpl = template.Must(template.Must(base.Clone()).ParseFS(templateFS, "templates/404.html"))
-
 	publicSub, _ := fs.Sub(publicFS, "public")
-	publicHandler := http.FileServer(http.FS(publicSub))
 	staticSub, _ := fs.Sub(staticFS, "static")
 	staticHandler := http.StripPrefix("/static/", http.FileServer(http.FS(staticSub)))
 
 	mux := http.NewServeMux()
 	mux.Handle("GET /static/", staticHandler)
-	mux.Handle("GET /cursors/", publicHandler)
-	mux.Handle("GET /resume.pdf", publicHandler)
-	mux.Handle("GET /resume.tex", publicHandler)
-	mux.Handle("GET /splashes.txt", publicHandler)
-	mux.Handle("GET /lackeys.txt", publicHandler)
-	mux.Handle("GET /richard.txt", publicHandler)
-	mux.Handle("GET /underline.svg", publicHandler)
-	mux.Handle("GET /linkedin.svg", publicHandler)
-	mux.Handle("GET /github.svg", publicHandler)
-	mux.Handle("GET /instagram.svg", publicHandler)
-	mux.Handle("GET /mail.svg", publicHandler)
-	mux.Handle("GET /file.svg", publicHandler)
-	mux.Handle("GET /lightbulb.svg", publicHandler)
-	mux.Handle("GET /thought-bubble.svg", publicHandler)
-	mux.Handle("GET /camera.svg", publicHandler)
-	mux.Handle("GET /footer-left.svg", publicHandler)
-	mux.Handle("GET /footer-right.svg", publicHandler)
-	mux.Handle("GET /icon.png", publicHandler)
-	mux.Handle("GET /thoughts/", http.StripPrefix("/", publicHandler))
-
-	mux.HandleFunc("GET /{$}", handleIndex)
-	mux.HandleFunc("GET /404", handle404)
-	mux.HandleFunc("GET /", handleCatchAll)
+	mux.Handle("/", publicHandler(publicSub))
 
 	log.Println("Listening on :8080")
 	log.Fatal(http.ListenAndServe(":8080", mux))
 }
 
-func readPublicFiles() {
-	data, err := publicFS.ReadFile("public/lackeys.txt")
-	if err == nil {
-		lackeysText = string(data)
-	}
-	data, err = publicFS.ReadFile("public/richard.txt")
-	if err == nil {
-		richardText = string(data)
-	}
-	data, err = publicFS.ReadFile("public/splashes.txt")
-	if err == nil {
-		splashes = strings.Split(strings.TrimSpace(string(data)), "\n")
-	}
+func publicHandler(publicFS fs.FS) http.Handler {
+	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		clean := path.Clean("/" + r.URL.Path)
+		if strings.HasPrefix(clean, "/static/") {
+			w.WriteHeader(http.StatusNotFound)
+			return
+		}
+		filePath := strings.TrimPrefix(clean, "/")
+		if filePath == "" || strings.HasSuffix(clean, "/") {
+			filePath = path.Join("html", filePath, "index.html")
+		}
+		if exists(publicFS, filePath) {
+			http.ServeFileFS(w, r, publicFS, filePath)
+			return
+		}
+		w.WriteHeader(http.StatusNotFound)
+		f, err := publicFS.Open("html/404.html")
+		if err != nil {
+			return
+		}
+		defer f.Close()
+		io.Copy(w, f)
+	})
 }
 
-func isDark(r *http.Request) bool {
-	c, err := r.Cookie("theme")
+func exists(root fs.FS, name string) bool {
+	if name == "" {
+		return false
+	}
+	info, err := fs.Stat(root, name)
 	if err != nil {
 		return false
 	}
-	return c.Value == "dark"
-}
-
-func handleIndex(w http.ResponseWriter, r *http.Request) {
-	data := PageData{
-		Dark:    isDark(r),
-		Lackeys: lackeysText,
-		Richard: richardText,
-	}
-	w.Header().Set("Content-Type", "text/html; charset=utf-8")
-	indexTmpl.ExecuteTemplate(w, "base.html", data)
-}
-
-func handle404(w http.ResponseWriter, r *http.Request) {
-	w.WriteHeader(http.StatusNotFound)
-	data := NotFoundData{
-		Dark:    isDark(r),
-		Lackeys: lackeysText,
-		Richard: richardText,
-		Splash:  splashes[rand.Intn(len(splashes))],
-	}
-	w.Header().Set("Content-Type", "text/html; charset=utf-8")
-	notfoundTmpl.ExecuteTemplate(w, "base.html", data)
-}
-
-func handleCatchAll(w http.ResponseWriter, r *http.Request) {
-	handle404(w, r)
+	return !info.IsDir()
 }
