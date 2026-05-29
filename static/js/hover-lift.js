@@ -1,6 +1,6 @@
 (function() {
   var max = 2;
-  document.querySelectorAll('a, button, [role="button"]').forEach(function(btn) {
+  document.querySelectorAll('a:not(.footer-nav-link), button, [role="button"]').forEach(function(btn) {
     btn.classList.add('hover-lift');
     btn.addEventListener('mousemove', function(e) {
       var r = btn.getBoundingClientRect();

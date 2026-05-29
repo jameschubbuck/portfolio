@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ponderings — James Chubbuck</title>
+    <meta name="description" content="Ponderings by James Chubbuck" />
+    <link rel="icon" type="image/png" href="/icon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;700;800&family=Geist+Mono:wght@400;500;700&family=Dancing+Script:wght@400;700&family=Space+Grotesk:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/static/css/style.css" />
+    <script>
+      (function () {
+        var t = localStorage.getItem("theme");
+        if (!t)
+          t = window.matchMedia("(prefers-color-scheme:dark)").matches
+            ? "dark"
+            : "light";
+        document.documentElement.classList.toggle("dark", t === "dark");
+      })();
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <main class="main">
+        <h1 class="header title" data-title="PONDERINGS" data-title-mode="plain"></h1>
+        <img src="/svg/underline.svg" alt="" class="title-underline" />
+        <div class="content-wrapper">
+          <nav id="pondering-list" class="pondering-list"></nav>
+          <article id="pondering-content" class="pondering-content"></article>
+        </div>
+      </main>
+      <footer class="footer footer--ponderings">
+        <div class="footer-content">
+          <img src="/svg/footer-left.svg" alt="" class="footer-bracket" />
+          <a href="#" onclick="history.back();return false" class="footer-nav-link">back</a>
+          <span id="footer-text" class="footer-text">&copy; 2026 James Chubbuck</span>
+          <a id="theme-toggle" class="footer-nav-link" data-theme-text href="#">dark</a>
+          <img src="/svg/footer-right.svg" alt="" class="footer-bracket" />
+        </div>
+      </footer>
+      <script src="/static/js/markdown.js"></script>
+      <script src="/static/js/ponderings.js"></script>
+      <script src="/static/js/title.js"></script>
+      <script src="/static/js/hover-lift.js"></script>
+      <script src="/static/js/theme.js"></script>
+    </div>
+  </body>
+</html>

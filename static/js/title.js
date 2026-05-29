@@ -1,14 +1,17 @@
 (function(){
   function buildTitle(el){
     var raw = (el.getAttribute('data-title') || '').trim();
+    var mode = el.getAttribute('data-title-mode') || 'about';
     var parts = raw ? raw.split('|').filter(Boolean) : [];
     el.innerHTML = '';
     el.classList.remove('title--single', 'title-end-dropped');
 
-    var about = document.createElement('span');
-    about.className = 'title-about';
-    about.textContent = 'ABOUT:';
-    el.appendChild(about);
+    if (mode !== 'plain') {
+      var about = document.createElement('span');
+      about.className = 'title-about';
+      about.textContent = 'ABOUT:';
+      el.appendChild(about);
+    }
 
     if (parts.length > 1) {
       var centerText = parts.slice(0, -1).join(' ');

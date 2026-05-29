@@ -2,11 +2,13 @@ package main
 
 import (
 	"embed"
+	"encoding/json"
 	"io"
 	"io/fs"
 	"log"
 	"net/http"
 	"path"
+	"sort"
 	"strings"
 )
 
@@ -23,6 +25,7 @@ func main() {
 
 	mux := http.NewServeMux()
 	mux.Handle("GET /static/", staticHandler)
+	mux.Handle("GET /ponderings/", ponderingHandler(publicSub))
 	mux.Handle("/", publicHandler(publicSub))
 
 	log.Println("Listening on :8080")
@@ -63,4 +66,46 @@ func exists(root fs.FS, name string) bool {
 		return false
 	}
 	return !info.IsDir()
+}
+
+func ponderingHandler(publicFS fs.FS) http.HandlerFunc {
+	return func(w http.ResponseWriter, r *http.Request) {
+		clean := path.Clean("/" + r.URL.Path)
+
+		if clean == "/ponderings/list" {
+			entries, err := fs.ReadDir(publicFS, "ponderings")
+			if err != nil {
+				http.Error(w, "Internal error", http.StatusInternalServerError)
+				return
+			}
+			var list []map[string]string
+			for _, e := range entries {
+				name := e.Name()
+				if !strings.HasSuffix(name, ".md") || e.IsDir() {
+					continue
+				}
+				parts := strings.SplitN(name, " - ", 2)
+				if len(parts) != 2 {
+					continue
+				}
+			list = append(list, map[string]string{
+				"id":         strings.TrimSpace(parts[0]),
+				"title":      strings.TrimSuffix(name, ".md"),
+				"shortTitle": strings.TrimSuffix(strings.TrimSpace(parts[1]), ".md"),
+				"file":       name,
+			})
+			}
+			sort.Slice(list, func(i, j int) bool { return list[i]["id"] > list[j]["id"] })
+			w.Header().Set("Content-Type", "application/json")
+			json.NewEncoder(w).Encode(list)
+			return
+		}
+
+		filePath := strings.TrimPrefix(clean, "/")
+		if filePath != "" && exists(publicFS, filePath) {
+			http.ServeFileFS(w, r, publicFS, filePath)
+			return
+		}
+		http.ServeFileFS(w, r, publicFS, "html/ponderings.html")
+	}
 }

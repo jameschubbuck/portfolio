@@ -1,3 +1,0 @@
-# The Good Life
-
-Undoubtedly, the Good Life is the one that brings the most pleasure to those who live it, or otherwise it would in fact not be very good at all. Yet, it is undeniable that certain hedonistic activities which bring great pleasure are incompatible with any good life at all. Therefore, these activities must come with costs which are both not readily apparent and easy enough to ignore by those who engage in them—much as one who drinks too much at night must suffer the consequences in the morning. Ultimately, activities that pertain to the good life must serve one's best interests not merely in the moment, but holistically.

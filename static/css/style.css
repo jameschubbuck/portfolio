@@ -44,6 +44,22 @@ body {
   font-family: "Geist Mono", "Courier New", monospace;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  cursor:
+    url("/cursors/arrow.png") 0 0,
+    auto;
+}
+
+a,
+button,
+[role="button"],
+input,
+select,
+textarea,
+label,
+summary {
+  cursor:
+    url("/cursors/pointer.png") 8 4,
+    pointer;
 }
 
 a {
@@ -261,7 +277,9 @@ a:visited {
   text-decoration: none;
   background: var(--fg);
   border-radius: 0.375rem;
-  font-family: "Geist", system-ui, sans-serif;
+  font-family: "Space Grotesk", system-ui, sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.01em;
   user-select: none;
 }
 
@@ -354,6 +372,10 @@ a:visited {
   gap: 1rem;
 }
 
+.gap-row--solo .outline-button {
+  width: 100%;
+}
+
 .ascii-corner {
   position: fixed;
   bottom: 0;
@@ -437,6 +459,33 @@ a:visited {
   text-align: center;
 }
 
+.footer--ponderings .footer-content {
+  grid-template-columns: auto auto 1fr auto auto;
+  gap: 0.75rem;
+}
+
+.footer--ponderings .footer-bracket:first-child {
+  justify-self: auto;
+}
+
+.footer--ponderings .footer-bracket:last-child {
+  justify-self: auto;
+}
+
+.footer-nav-link {
+  color: var(--blue);
+  font-family: "Geist", system-ui, sans-serif;
+  font-size: 0.875rem;
+}
+
+.footer-nav-link:hover {
+  color: var(--blue);
+}
+
+.footer-nav-link:visited {
+  color: var(--blue);
+}
+
 .footer-link {
   text-decoration: underline;
   color: inherit;
@@ -479,6 +528,68 @@ a:visited {
 
 .hover-underline:hover {
   text-decoration: underline;
+}
+
+.pondering-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.pondering-list-item {
+  display: flex;
+  width: 100%;
+}
+
+.pondering-content {
+  font-family: "Geist", system-ui, sans-serif;
+  line-height: 1.7;
+  color: var(--fg);
+}
+
+.pondering-content h1,
+.pondering-content h2,
+.pondering-content h3 {
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.pondering-content h1 {
+  font-size: 1.5rem;
+  margin: 0 0 1rem;
+}
+.pondering-content h2 {
+  font-size: 1.25rem;
+  margin: 1.5rem 0 0.75rem;
+}
+.pondering-content h3 {
+  font-size: 1.125rem;
+  margin: 1.25rem 0 0.5rem;
+}
+.pondering-content p {
+  margin: 0 0 1rem;
+}
+.pondering-content p:last-child {
+  margin-bottom: 0;
+}
+.pondering-content blockquote {
+  margin: 0 0 1rem;
+  padding: 0.5rem 1rem;
+  border-left: 3px solid var(--blue);
+  color: var(--muted);
+  font-style: italic;
+}
+.pondering-content code {
+  font-family: "Geist Mono", "Courier New", monospace;
+  font-size: 0.875em;
+  background: var(--bar-bg);
+  padding: 0.125rem 0.375rem;
+  border-radius: 0.25rem;
+}
+.pondering-content hr {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 1.5rem 0;
 }
 
 @media (max-width: 640px) {
